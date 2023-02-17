@@ -1,15 +1,5 @@
 # Eventkalender
-*Letzte Aktualisierung; Donnerstag, Februar 16, 2023 15:42*
-## Donnerstag, Februar 16, 2023 
-### Planlos Leipzig: 
-- **16:00 - 18:00:** BlackHistoryMonth23 :  Treffen der BiPoC HochschulgruppeUniversität Leipzig, Leipzig - [[link]](https://www.planlos-leipzig.org/events/blackhistorymonth23-treffen-der-bipoc-hochschulgruppe-2023-02-16/)
-- **19:00:** Musa Okwonga: "Es ging immer nur um Liebe" (Lesung & Gespräch)Cineding, Leipzig - [[link]](https://www.planlos-leipzig.org/events/es_ging_immer_nur_um_liebe/)
-- **19:00 - 23:45:** Vortrag zur Geschichte des Anarchismus + Solibar für die Verteidigung Exarchiaseg125 (Leipzig Ost), Leipzig - [[link]](https://www.planlos-leipzig.org/events/vortrag-zur-geschichte-des-anarchismus-solibar-fuer-die-verteidigung-exarchias/)
-
-### Sachsen Punk:
-- Conne Island – Pascow + Wonk Unit (ausverkauft!)
-- Stö – O.U.T + Nasty Pack
-
+*Letzte Aktualisierung; Freitag, Februar 17, 2023 11:44*
 ## Freitag, Februar 17, 2023 
 ### Planlos Leipzig: 
 - **19:00 - 23:59:** Antifa SolitresenHiha Eiba 182, Leipzig - [[link]](https://www.planlos-leipzig.org/events/antifa-solitresen-2/)
@@ -44,6 +34,7 @@
 ## Dienstag, Februar 21, 2023 
 ### Planlos Leipzig: 
 - **18:00 - 20:00:** money talk mit dem Thema SOLIDARKASSEN - Wie können wir Geld solidarisch und regelmäßig im Alltag umverteilenOrt auf Anfrage, Leipziger Westen - [[link]](https://www.planlos-leipzig.org/events/money-talk-mit-dem-thema-solidarkassen-wie-koennen-wir-geld-solidarisch-und-regelmaessig-im-alltag-umverteilen/)
+- **19:00 - 21:00:** Documenta15 revisited (I): Dabei sein ist alles. Kunst nach dem Ende ihrer AutonomieConne Island, Leipzig - [[link]](https://www.planlos-leipzig.org/events/documenta15-revisited-i-dabei-sein-ist-alles-kunst-nach-dem-ende-ihrer-autonomie/)
 - **19:00 - 21:00:** Intersektionaler LesekreisGeisteswissenschaftliches Zentrum (GWZ) der Universität Leipzig, 04107 Leipzig - [[link]](https://www.planlos-leipzig.org/events/intersektionaler-lesekreis-2023-02-21/)
 
 ### Sachsen Punk:
@@ -146,15 +137,25 @@
 - Täubchenthal – I Prevail + Trash Boat + Blind Channel
 
 ## Freitag, März 10, 2023 
+### Planlos Leipzig: 
+- **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig - [[link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2-2023-03-10/)
+
 ### Sachsen Punk:
 - Bandhaus – Space Chaser
 - Conne Island – Rogers + RAUM27
 - Stö (M.) – Roadkill BBQ + PingPongPunk
 
 ## Samstag, März 11, 2023 
+### Planlos Leipzig: 
+- **11:00 - 17:0011.03.2023 - 12.03.2023:** Dialektik bei Hegel - Wochenendseminartranslib, Leipzig - [[link]](https://www.planlos-leipzig.org/events/dialektik-bei-hegel-wochenendseminar/)
+
 ### Sachsen Punk:
 - Moritzbastei – Kill Your Boyfriend + Grundeis + I’m Your Stalker
 - Naumanns – Marathonmann + Kind Kaputt + Sperling
+
+## Sonntag, März 12, 2023 
+### Sachsen Punk:
+- Stö – 18 Uhr! (Matinée) – Hæresis + Kratt + Norkh + Rimruna
 
 ## Montag, März 13, 2023 
 ### Sachsen Punk:
@@ -308,7 +309,7 @@
 ## Samstag, Mai 06, 2023 
 ### Sachsen Punk:
 - Deutzen – Kulturpark – „Rock am Kuhteich 2023“ – Toxoplasma + Rantanplan + TV Smith + Missstand + 100blumen + DŸSE + CRIM + The Melmacs + Antimanifest + Todeskommando Atomsturm + Die Griffins + Mutabor + The Sensitives + The Dead End Kids + Molly Punch + Concrete Lipstick + Bang! Mustang + The Heroine Whores + Finnegan’s Hell + Endlich schlechte Musik & ESA + Bei Bedarf + SchlagsAite Leipzig + Günther and The Jauchs + Fluffy Machine
-- Conne Island – Alarmsignal
+- Conne Island – Alarmsignal + Shirley Holmes
 
 ## Sonntag, Mai 07, 2023 
 ### Sachsen Punk:
@@ -322,6 +323,7 @@
 ## Freitag, Mai 12, 2023 
 ### Sachsen Punk:
 - Conne Island – Oxo86 + Alvilda
+- Westbahnhof – Troops Of The Sun + Peppone
 
 ## Montag, Mai 15, 2023 
 ### Sachsen Punk:
