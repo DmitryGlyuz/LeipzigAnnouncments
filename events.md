@@ -1,5 +1,5 @@
 # Eventkalender
-*Letzte Aktualisierung; Freitag, Februar 17, 2023 11:44*
+*Letzte Aktualisierung; Freitag, Februar 17, 2023 19:18*
 ## Freitag, Februar 17, 2023 
 ### Planlos Leipzig: 
 - **19:00 - 23:59:** Antifa SolitresenHiha Eiba 182, Leipzig - [[link]](https://www.planlos-leipzig.org/events/antifa-solitresen-2/)
@@ -173,6 +173,7 @@
 ### Sachsen Punk:
 - Bandhaus – Eis + Maahes + Vorga
 - Conne Island – Be Well + Touch + Giver + Hard Strike
+- Karl Helga – Lötfett + Dispo + Beach Cops + Packung
 - Zxrx – Sorah + Salomè the Sass + ART3M1S + DJs
 
 ## Sonntag, März 19, 2023 
@@ -225,6 +226,10 @@
 - Plaque – Boneflower + Neska Lagun
 - UT Connewitz – „A Sinister Purpose“ – Ordigort + Konfession + ALKERDEEL + KroloK + Ved Buens Ende + ROSA NEBEL
 
+## Sonntag, April 02, 2023 
+### Sachsen Punk:
+- Axxxi – Riot Spears + Colored Moth
+
 ## Montag, April 03, 2023 
 ### Sachsen Punk:
 - Naumanns – Smile and Burn + Kind Kaputt + Emmerich
@@ -267,12 +272,15 @@
 
 ## Freitag, April 21, 2023 
 ### Sachsen Punk:
+- Bandhaus – Dead or Alive + Last Caress + Nüörwäna
 - Zxrx – Pussy Gillette + Poison Ruin
 
 ## Samstag, April 22, 2023 
 ### Sachsen Punk:
+- Bandhaus – Tausend Löwen unter Feinden + Minus Youth + Angstbreaker
 - Conne Island – Counterparts + Kublai Khan TX + Paleface + Dying Wish
 - Felsenkeller – The Baboon Show + CRIM
+- Plaque – The Tidal Sleep + Viva Belgrado
 
 ## Donnerstag, April 27, 2023 
 ### Sachsen Punk:
@@ -339,6 +347,7 @@
 
 ## Samstag, Mai 20, 2023 
 ### Sachsen Punk:
+- UT Connewitz – Swans + Norman Westberg
 - Zxrx – Der Schwarze Kanal + Re-Aktion + Zirkus Zirkus + Defloration
 
 ## Montag, Mai 22, 2023 
@@ -356,6 +365,7 @@
 
 ## Samstag, Mai 27, 2023 
 ### Sachsen Punk:
+- Axxxi – Ka’tzon La’Tevach + Masada
 - WGT (diverse Loctions) – The Other + A Place To Bury Strangers + Kaelan Mikla + Bloody, Dead & Sexy + The KVB + Minuit Machine +++
 
 ## Sonntag, Mai 28, 2023 
@@ -378,6 +388,10 @@
 ### Sachsen Punk:
 - Moritzbastei – Esben And The Witch + Fågelle
 
+## Samstag, Juni 10, 2023 
+### Sachsen Punk:
+- Bandhaus 2.0 – „Bandhaus Open Air“
+
 ## Freitag, Juni 16, 2023 
 ### Sachsen Punk:
 - Conne Island (Open Air) – „Beard Ättäck Fest“ – 17 Uhr! – Muff Potter + Grade 2 + Mobina Galore + Make War + Timeshares + Wonk Unit + March + Jughead’s Revenge + The Melmacs + Between Bodies + Chartreux + The Carolyn +++ 
@@ -397,6 +411,10 @@
 ## Samstag, Juli 01, 2023 
 ### Sachsen Punk:
 - Conne Island (Open Air) – 18 Uhr! – Perkele + Lazy Class + The Spartanics + Sintage
+
+## Samstag, Juli 08, 2023 
+### Sachsen Punk:
+- Bandhaus 2.0 – „Hippie Yeah“-Open Air
 
 ## Montag, Juli 31, 2023 
 ### Sachsen Punk:
