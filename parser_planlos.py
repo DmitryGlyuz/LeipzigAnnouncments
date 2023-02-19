@@ -5,7 +5,7 @@ import requests
 import locale
 
 
-locale.setlocale(locale.LC_TIME, 'de_DE.UTF-8')
+locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
 
 URL = "https://www.planlos-leipzig.org/"
 r = requests.get(URL)

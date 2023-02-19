@@ -9,12 +9,17 @@ planlos_events = parser_planlos.events
 sachsenpunk_events = parser_sachsenpunk.events
 songkick_events = parser_songkick.events
 
-# all_dates = list(set(list(planlos_events) + list(sachsenpunk_events)))
 all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
 all_dates.sort()
 now = datetime.now().strftime("%A, %B %d, %Y %H:%M")
-markdown_contents = f"# Eventkalender\n" \
-     f"*Letzte Aktualisierung; {now}*\n"
+markdown_contents = f"""# Eventkalender
+Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leipzig von den folgenden Websites:
+- https://www.planlos-leipzig.org/
+- https://sachsenpunk.de/
+- https://www.songkick.com/
+
+*Letzte Aktualisierung; {now}*
+"""
 for date in all_dates:
     date_obj = datetime.strptime(date, "%Y-%m-%d")
     date_str = date_obj.strftime("%A, %B %d, %Y")
@@ -49,5 +54,5 @@ for date in all_dates:
             markdown_contents += markdown_line + "\n"
         markdown_contents += '\n'
 
-with open("events.md", 'w') as f:
+with open('events.md', 'w', encoding='UTF-8') as f:
     f.write(markdown_contents)
