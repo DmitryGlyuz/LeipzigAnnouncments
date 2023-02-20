@@ -4,27 +4,14 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - https://sachsenpunk.de/
 - https://www.songkick.com/
 
-*Letzte Aktualisierung; Sonntag, Februar 19, 2023 02:31*
-## Samstag, Februar 18, 2023 
-### Sachsen Punk:
-- Bandhaus – Dividing Lines + Kadeadkas + Horror Vacui
-- Stö (M.) – Akedia + Slat + Support
-- Zxrx – Oiro + Scanty + Cold Summer + Highway Patrol + Scuff Marks
-
-## Sonntag, Februar 19, 2023 
-### Planlos Leipzig: 
-- **15:00 - 17:00:** BlackHistoryMonth23: Afrohair WorkshopOrt im Leipziger Westen, Leipziger Westen | [[event link]](https://www.planlos-leipzig.org/events/blackhistorymonth23-afrohair-workshop/)
-- **16:00:** 3 Jahre Hanau - GedenkkundgebungRabet, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/3-jahre-hanau-gedenkkundgebung/)
-
-### Sachsen Punk:
-- Secondhandshop – 17 Uhr! – Howyesno + Ambulanz + Gruppe Fließband + Zommies
-
+*Letzte Aktualisierung; Montag, Februar 20, 2023 14:59*
 ## Montag, Februar 20, 2023 
 ### Planlos Leipzig: 
 - **17:00 - 19:00:** BlackHIstoryMonth23: Quality Time HangoutRosaLinde e.V., 04177 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/blackhistorymonth23-quality-time-hangout-2023-02-20/)
 
 ## Dienstag, Februar 21, 2023 
 ### Planlos Leipzig: 
+- **14:00:** Weg mit dem Paragraphen 129! Freiheit für Özgül, Ihsan, Serkan & Hasan! Freiheit für alle antifaschistischen und revolutionären Gefangenen!Augustusplatz, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/weg-mit-dem-paragraphen-129-freiheit-fuer-oezguel-ihsan-serkan-hasan-freiheit-fuer-alle-antifaschistischen-und-revolutionaeren-gefangenen/)
 - **18:00 - 20:00:** money talk mit dem Thema SOLIDARKASSEN - Wie können wir Geld solidarisch und regelmäßig im Alltag umverteilenOrt auf Anfrage, Leipziger Westen | [[event link]](https://www.planlos-leipzig.org/events/money-talk-mit-dem-thema-solidarkassen-wie-koennen-wir-geld-solidarisch-und-regelmaessig-im-alltag-umverteilen/)
 - **19:00 - 21:00:** Documenta15 revisited (I): Dabei sein ist alles. Kunst nach dem Ende ihrer AutonomieConne Island, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/documenta15-revisited-i-dabei-sein-ist-alles-kunst-nach-dem-ende-ihrer-autonomie/)
 - **19:00 - 21:00:** Intersektionaler LesekreisGeisteswissenschaftliches Zentrum (GWZ) der Universität Leipzig, 04107 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/intersektionaler-lesekreis-2023-02-21/)
@@ -37,6 +24,9 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - Zebrahead @ Felsenkeller [[event link]](https://www.songkick.com/concerts/40456170-zebrahead-at-felsenkeller) | [[venue link]](https://www.songkick.com/venues/3037119-felsenkeller)
 
 ## Mittwoch, Februar 22, 2023 
+### Planlos Leipzig: 
+- **19:00 - 21:00:** Infoveranstaltung: Crash the European Gas Conferenceinterim, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/infoveranstaltung-crash-the-european-gas-conference/)
+
 ### Sachsen Punk:
 - Werk 2 (Halle D) – Haken + Between The Buried And Me
 
@@ -47,6 +37,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 
 ## Donnerstag, Februar 23, 2023 
 ### Planlos Leipzig: 
+- **15:30:** Vortrag: Awareness in politischen GruppenHelmut, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/vortrag-awareness-in-politischen-gruppen/)
 - **16:00 - 18:00:** BlackHistoryMonth23 :  Treffen der BiPoC HochschulgruppeUniversität Leipzig, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/blackhistorymonth23-treffen-der-bipoc-hochschulgruppe-2023-02-23/)
 - **18:30:** Buchvorstellung:  Wir verstehen nicht, was geschiehtConne Island, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/buchvorstellung-wir-verstehen-nicht-was-geschieht/)
 
@@ -55,6 +46,9 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - Searching For Home @ Moritzbastei [[event link]](https://www.songkick.com/concerts/40569672-searching-for-home-at-moritzbastei) | [[venue link]](https://www.songkick.com/venues/36957-moritzbastei)
 
 ## Freitag, Februar 24, 2023 
+### Planlos Leipzig: 
+- **18:00 - 20:00:** Vortrag+Diskussion: Queer_Feminismus: Label & LebensrealitätFrauenkultur Leipzig, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/vortragdiskussion-queer_feminismus-label-lebensrealitaet/)
+
 ### Sachsen Punk:
 - Moritzbastei – The Other
 - Zxrx – Slan + Earth Crust Displacement + Argh Fuck Kill
@@ -112,6 +106,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2023-03-01/)
 - **18:30 - 21:30:** Wen schützen Menschenrechte (nicht)?Pöge-Haus, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/wen-schuetzen-menschenrechte-nicht/)
 - **19:00 - 21:00:** Vernissage «10 Views on Migration»Kunstraum D21, 04177 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/vernissage-10-views-on-migration/)
+- **20:00:** Film+Gespräch: Wie wir wollenOst-Passage Theater, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/filmgespraech-wie-wir-wollen/)
 
 ### Sachsen Punk:
 - MVB – Schäden
@@ -123,6 +118,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 ## Donnerstag, März 02, 2023 
 ### Planlos Leipzig: 
 - **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2023-03-02/)
+- **14:00 - 15:3002.03.2023 - 03.03.2023:** Seminar: Geschlechterrollen in der Praxis der GeschichtsnachstellungLeibniz-Institut für Geschichte und Kultur des östlichen Europa (GWZO), 04109 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/seminar-geschlechterrollen-in-der-praxis-der-geschichtsnachstellung/)
 
 ### Sachsen Punk:
 - Felsenkeller – ERRA + Silent Planet + Invent Animate + Sentinels
@@ -159,10 +155,12 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 
 ## Samstag, März 04, 2023 
 ### Planlos Leipzig: 
+- **10:00 - 14:00:** Saatgut-Tauschbörse in TauchaSchloss Taucha, Taucha | [[event link]](https://www.planlos-leipzig.org/events/saatgut-tauschboerse-in-taucha/)
 - **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2023-03-04/)
 - **15:00 - 17:00:** How to Solizimmer? - Veranstaltung zum aktiv werdenIndex, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/how-to-solizimmer-veranstaltung-zum-aktiv-werden/)
 
 ### Sachsen Punk:
+- Axxxi – Postford + Onyon + Spacemaus
 - M.V.B. – Gloomy Cereals + Dustsucker
 - Soltmann – Gravpel + Trespasser + Myrdal
 
@@ -171,15 +169,21 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - **20:00:** Karate Andi @ Täubchenthal [[event link]](https://www.songkick.com/concerts/40428663-karate-andi-at-taubchenthal) | [[venue link]](https://www.songkick.com/venues/2321004-taubchenthal)
 - **21:00:** Thomas Beyer @ Muldentalhalle Grimma [[event link]](https://www.songkick.com/concerts/40812074-thomas-beyer-at-muldentalhalle-grimma) | [[venue link]](https://www.songkick.com/venues/4442479-muldentalhalle-grimma)
 - **23:30:** Andy's Echo @ Conne Island [[event link]](https://www.songkick.com/concerts/40835163-andys-echo-at-conne-island) | [[venue link]](https://www.songkick.com/venues/33353-conne-island)
+- Leipziger Umschlag 2023[[event link]](https://www.songkick.com/festivals/2208909-leipziger-umschlag/id/40925928-leipziger-umschlag-2023)
 
 ## Sonntag, März 05, 2023 
 ### Planlos Leipzig: 
+- **14:30 - 16:30:** Filmvorführung “Es kommt darauf an das Hoffen zu lernen. Umsiedlungsgeschichten aus dem Braunkohle-Revier Lausitz” mit anschließendem FilmgesprächKirchstr. 1, Taucha b. Leipzig | [[event link]](https://www.planlos-leipzig.org/events/filmvorfuehrung-es-kommt-darauf-an-das-hoffen-zu-lernen-umsiedlungsgeschichten-aus-dem-braunkohle-revier-lausitz-mit-anschliessendem-filmgespraech/)
 - **19:00 - 20:30:** Film & Diskussion: „Zeit zum Atemholen“ – Frauenfußball-Team kickt gegen UnterdrückungOst-Passage Theater, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/film-diskussion-zeit-zum-atemholen-frauenfussball-team-kickt-gegen-unterdrueckung/)
+- **19:00:** Film+Gespräch: Zeit zum Atemholen – Frauenfußball kickt gegen UnterdrückungOst-Passage Theater, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/zeit-zum-atemholen/)
 
 ### Songkick: 
 - Dirk Michaelis @ Schlossgartensalon [[event link]](https://www.songkick.com/concerts/40771945-dirk-michaelis-at-schlossgartensalon) | [[venue link]](https://www.songkick.com/venues/3101094-schlossgartensalon)
 
 ## Dienstag, März 07, 2023 
+### Planlos Leipzig: 
+- **17:00 - 19:00:** Lesung: African Activists in a Decolonising WorldStohsackpassage, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/lesung-african-activists-in-a-decolonising-world/)
+
 ### Songkick: 
 - Alligatoah @ Quarterback Immobilien Arena [[event link]](https://www.songkick.com/concerts/40345097-alligatoah-at-quarterback-immobilien-arena) | [[venue link]](https://www.songkick.com/venues/4365668-quarterback-immobilien-arena)
 - **20:00:** Devin Townsend @ Werk 2 - Halle A [[event link]](https://www.songkick.com/concerts/39880136-devin-townsend-at-werk-2-halle-a) | [[venue link]](https://www.songkick.com/venues/33803-werk-2-halle-a)
@@ -189,6 +193,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 ## Mittwoch, März 08, 2023 
 ### Planlos Leipzig: 
 - **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2-2023-03-08/)
+- **19:00:** Filmvorführung und Gespräch: Uferfrauen – Lesbisches L(i)eben in der DDRZeitgeschichtliches Forum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/filmvorfuehrung-und-gespraech-uferfrauen-lesbisches-lieben-in-der-ddr/)
 
 ### Sachsen Punk:
 - Conne Island – Shitney Beers + Tigeryouth
@@ -199,32 +204,16 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - **20:00:** Shitney Beers @ Conne Island [[event link]](https://www.songkick.com/concerts/40762511-shitney-beers-at-conne-island) | [[venue link]](https://www.songkick.com/venues/33353-conne-island)
 
 ## Donnerstag, März 09, 2023 
-### Planlos Leipzig: 
-- **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2-2023-03-09/)
-- **19:00 - 21:00:** Atlas der MigrationKunstraum D21, 04177 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/atlas-der-migration/)
-- **19:00 - 20:30:** Vortrag: No means No! – zum Umgang mit sexualisierter Gewalt im FußballPöge-Haus, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/vortrag-no-means-no-zum-umgang-mit-sexualisierter-gewalt-im-fussball/)
-
 ### Sachsen Punk:
 - Täubchenthal – I Prevail + Trash Boat + Blind Channel
 
-### Songkick: 
-- **20:00:** I Prevail @ Täubchenthal [[event link]](https://www.songkick.com/concerts/39531159-i-prevail-at-taubchenthal) | [[venue link]](https://www.songkick.com/venues/2321004-taubchenthal)
-
 ## Freitag, März 10, 2023 
-### Planlos Leipzig: 
-- **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2-2023-03-10/)
-
 ### Sachsen Punk:
 - Bandhaus – Space Chaser
 - Conne Island – Rogers + RAUM27
 - Stö (M.) – Roadkill BBQ + PingPongPunk
 
 ## Samstag, März 11, 2023 
-### Planlos Leipzig: 
-- **11:00 - 17:0011.03.2023 - 12.03.2023:** Dialektik bei Hegel - Wochenendseminartranslib, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/dialektik-bei-hegel-wochenendseminar/)
-- **13:00 - 18:00:** Argumentationstraining gegen Parolen und Populismus: Eine Anleitung und Übung für angemessene ReaktionenVolkshochschule Leipzig, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/argumentationstraining-gegen-parolen-und-populismus-eine-anleitung-und-uebung-fuer-angemessene-reaktionen/)
-- **14:00 - 19:00:** «10 Views on Migration»: Ausstellung mit Dokumentarfilmreihe und BegleitprogrammD21 Kunstraum, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/10-views-on-migration-ausstellung-mit-dokumentarfilmreihe-und-begleitprogramm-2-2023-03-11/)
-
 ### Sachsen Punk:
 - Moritzbastei – Kill Your Boyfriend + Grundeis + I’m Your Stalker
 - Naumanns – Marathonmann + Kind Kaputt + Sperling
@@ -242,16 +231,10 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - Felsenkeller – Henry Rollins (Spoken Word)
 
 ## Donnerstag, März 16, 2023 
-### Planlos Leipzig: 
-- **19:00 - 21:00:** Rich Kids – Von Influencer*innen, Business-Coaches und anderen falschen Finanz-Prophet*innenSchaubühne Lindenfels, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/rich-kids-von-influencerinnen-business-coaches-und-anderen-falschen-finanz-prophetinnen/)
-
 ### Sachsen Punk:
 - Noels Ballroom – The Third Sound + Camel Moon
 
 ## Freitag, März 17, 2023 
-### Planlos Leipzig: 
-- **19:30 - 21:00:** Basics of Anarchism #6 anarchism in the 3th millenniumAutodidaktische Initiative (ADI), Leipzig | [[event link]](https://www.planlos-leipzig.org/events/basics-of-anarchism-6-anarchism-in-the-3th-millennium/)
-
 ### Sachsen Punk:
 - Bandhaus – Eis + Maahes + Vorga
 - Conne Island – Be Well + Touch + Giver + Hard Strike
@@ -364,6 +347,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - Conne Island – Counterparts + Kublai Khan TX + Paleface + Dying Wish
 - Felsenkeller – The Baboon Show + CRIM
 - Plaque – The Tidal Sleep + Viva Belgrado
+- Westbahnhof – Her Absence Fill the World + Fiasko Leitmotiv + Dato Alaplaya & Aftershow
 
 ## Donnerstag, April 27, 2023 
 ### Sachsen Punk:
