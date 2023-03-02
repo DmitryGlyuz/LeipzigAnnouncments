@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from datetime import datetime
 import parser_planlos
 import parser_sachsenpunk
