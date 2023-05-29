@@ -26,5 +26,5 @@ def send_message(message):
 
 for file_name in os.listdir("tg_messages"):
     print(file_name)
-    with open(f"tg_messages/{file_name}", 'r') as f:
+    with open(f"tg_messages/{file_name}", 'r', encoding='utf-8') as f:
         send_message(f.read())
