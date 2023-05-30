@@ -1,14 +1,16 @@
 #!/usr/bin/python
+import json
 from datetime import datetime
-import parser_planlos
-import parser_sachsenpunk
-import parser_songkick
+import events_combinator
 from itertools import chain
 
 
-planlos_events = parser_planlos.events
-sachsenpunk_events = parser_sachsenpunk.events
-songkick_events = parser_songkick.events
+all_events = events_combinator.get_events()
+
+
+planlos_events = all_events["planlos"]
+sachsenpunk_events = all_events["sachsenpunk"]
+songkick_events = all_events["songkick"]
 
 all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
 all_dates.sort()
