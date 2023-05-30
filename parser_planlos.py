@@ -1,4 +1,3 @@
-import html5lib
 from bs4 import BeautifulSoup
 from datetime import datetime
 from collections import defaultdict

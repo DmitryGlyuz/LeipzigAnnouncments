@@ -24,7 +24,9 @@ def send_message(message):
         print(f'Failed to send message. Error code: {response.status_code}\n')
 
 
-for file_name in os.listdir("tg_messages"):
-    print(file_name)
-    with open(f"tg_messages/{file_name}", 'r') as f:
-        send_message(f.read())
+user_input = input("Press Y if you want to post announcements to LPZG channel: ")
+if user_input.lower() == 'y':
+    for file_name in os.listdir("tg_messages"):
+        print(file_name)
+        with open(f"tg_messages/{file_name}", 'r') as f:
+            send_message(f.read())
