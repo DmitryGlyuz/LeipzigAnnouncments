@@ -5,7 +5,88 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - https://sachsenpunk.de/ 
 - https://www.songkick.com/ 
 
-*Letzte Aktualisierung; Dienstag, Mai 30, 2023 21:23*
+*Letzte Aktualisierung; Mittwoch, Mai 31, 2023 10:51*
+## Mittwoch, Mai 31, 2023 
+### Planlos Leipzig: 
+- **18:00:** Die Zerschlagung des Widerstands – Terror gegen links und die Errichtung der frühen KonzentrationslagerLixer Stadtteilladen, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/die-zerschlagung-des-widerstands-terror-gegen-links-und-die-errichtung-der-fruehen-konzentrationslager/)
+- **18:00:** Vortrag und Diskussion: Queeres Verlangen im Holocaust - Eine Geschichte zwischen romantischer Liebe und Nötigung.Galerie KUB, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/queeres-verlangen-im-holocaust/)
+- **21:00 - 22:30:** Antifaschistische Demo in Leipzig am Tag der Urteilsverküngung im Antifa-Ost-VerfahrenLene-Voigt-Park, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/antifaschistische-demo-in-leipzig-am-tag-der-urteilsverkuengung-im-antifa-ost-verfahren/)
+- **21:30 - 23:15:** Dokumentarfilm: DER RHEIN FLIESST INS MITTELMEERCinémathèque Leipzig in der naTo, 04275 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/dokumentarfilm-der-rhein-fliesst-ins-mittelmeer-2023-05-31/)
+
+### Songkick: 
+- **20:00:** Wincent Weiss @ Quarterback Immobilien Arena [[event link]](https://www.songkick.com/concerts/39766047-wincent-weiss-at-quarterback-immobilien-arena) | [[venue link]](https://www.songkick.com/venues/4365668-quarterback-immobilien-arena)
+
+## Donnerstag, Juni 01, 2023 
+### Planlos Leipzig: 
+- **18:00 - 21:00:** Workshop Patriarchale Gewalt im digitalen RaumFrauenkultur Leipzig, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/workshop-patriarchale-gewalt-im-digitalen-raum/)
+- **20:00 - 23:00:** Vortrag&Küfa - Vortrag zum Thema JugendidentitätKonradstraße, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/vortragkuefa-vortrag-zum-thema-jugendidentitaet/)
+
+### Sachsen Punk: 
+- Caracan Bar – 19 Uhr! – Koonda Holaa + DouXLeurre
+- Conne Island – Hot Water Music + Sincere Engineer (ausverkauft!)
+
+### Songkick: 
+- Hot Water Music @ Conne Island [[event link]](https://www.songkick.com/concerts/40790579-hot-water-music-at-conne-island) | [[venue link]](https://www.songkick.com/venues/33353-conne-island)
+- **19:30:** André Rieu @ Quarterback Immobilien Arena [[event link]](https://www.songkick.com/concerts/40827602-andre-rieu-at-quarterback-immobilien-arena) | [[venue link]](https://www.songkick.com/venues/4365668-quarterback-immobilien-arena)
+- **17:00:** Outdoor @ Parkbühne Geyserhaus [[event link]](https://www.songkick.com/concerts/41031962-sven-van-thom-at-parkbuhne-geyserhaus) | [[venue link]](https://www.songkick.com/venues/1279966-parkbuhne-geyserhaus)
+- **20:00:** Sjaella @ die naTo [[event link]](https://www.songkick.com/concerts/40845063-sjaella-at-die-nato) | [[venue link]](https://www.songkick.com/venues/71520-die-nato)
+- **19:30:** Gewürztraminer @ Moritzbastei [[event link]](https://www.songkick.com/concerts/41098980-gewurztraminer-at-moritzbastei) | [[venue link]](https://www.songkick.com/venues/36957-moritzbastei)
+
+## Freitag, Juni 02, 2023 
+### Planlos Leipzig: 
+- **Ganztägig 02.06.2023 - 04.06.2023:** queerintersektionales Pride-Wochenende (WS, Vorträge...) | [[event link]](https://www.planlos-leipzig.org/events/queerintersektionales-pride-wochenende-ws-vortraege/)
+- **18:00 - 20:00:** unverhuetbar - offenes Treffen zu Verhütungsverantwortung im Kontext von MännlichkeitIndex, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/unverhuetbar-offenes-treffen-zu-verhuetungsverantwortung-im-kontext-von-maennlichkeit-18/)
+
+### Sachsen Punk: 
+- Conne Island – Boysetsfire (ausverkauft!)
+- Moritzbastei – The Ukrainians + Die Ukrainiens + Chor Slawia + Kapela Polska
+- Nous-Nous (Merse 25) – Die Snobs + Dustsucker
+
+### Songkick: 
+- Boysetsfire @ Conne Island [[event link]](https://www.songkick.com/concerts/40913582-boysetsfire-at-conne-island) | [[venue link]](https://www.songkick.com/venues/33353-conne-island)
+- **20:00:** Long Voyage @ Cammerspiele [[event link]](https://www.songkick.com/concerts/41174016-long-voyage-at-cammerspiele) | [[venue link]](https://www.songkick.com/venues/1630773-cammerspiele)
+- Outdoor @ Parkbühne Clara Zetkin Park [[event link]](https://www.songkick.com/concerts/40557715-karat-at-parkbuhne-clara-zetkin-park) | [[venue link]](https://www.songkick.com/venues/83185-parkbuhne-clara-zetkin-park)
+- **19:30:** Outdoor @ Blumenland Engler [[event link]](https://www.songkick.com/concerts/40860907-friedrich-rau-at-blumenland-engler) | [[venue link]](https://www.songkick.com/venues/4436365-blumenland-engler)
+- **20:00:** plainhead @ Pracht [[event link]](https://www.songkick.com/concerts/41143747-plainhead-at-pracht) | [[venue link]](https://www.songkick.com/venues/2577563-pracht)
+- Outdoor @ Markt [[event link]](https://www.songkick.com/festivals/3553558-stadtfest-borna/id/41127623-stadtfest-borna-2023) | [[venue link]](https://www.songkick.com/venues/4506878-markt)
+
+## Samstag, Juni 03, 2023 
+### Planlos Leipzig: 
+- **10:00 - 14:00:** Awareness (nicht nur) im GemeinschaftsgartenGemeinschaftsgarten DILL, 04229 Leipzig | [[event link]](https://www.planlos-leipzig.org/events/awareness-nicht-nur-im-gemeinschaftsgarten/)
+- **11:00 - 12:30:** Stadtteilrundgang: NS-Zwangsarbeit in ReudnitzLene-Voigt-Park, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/stadtteilrundgang-ns-zwangsarbeit-in-reudnitz-11/)
+- **17:00:** Tag-X Demo: Soli-Antifa-OstWolfgang-Heinze-Straße, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/tag-x-demo-soli-antifa-ost/)
+- **18:00 03.06.2023 - 04.06.2023:** Nicos Poulantzas: Einführung in die materialistische Staatstheorie. Ein WochendseminarOstbüro, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/nicos-poulantzas-einfuehrung-in-die-materialistische-staatstheorie-ein-wochendseminar/)
+- **23:00 - 6:00 03.06.2023 - 04.06.2023:** Ear Bladez - SolipartyG16, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/ear-bladez-soliparty/)
+
+### Sachsen Punk: 
+- Conne Island – 19:30 Uhr! – Soulground + Who’s Foolin Who? + Light It Up + Support
+- HxMx – „Ostsaarzorn Zine“-Release“ – Spacemaus + Kommando Brigitte Speer
+- Karl Helga – LPP143 + Szillo + Älmächtig
+- Moritzbastei – Esben And The Witch + Fågelle
+- Suedbrause – Bei Freunden – SchlagsAite + Aktion Index
+
+### Songkick: 
+- Herbert Grönemeyer @ Red Bull Arena [[event link]](https://www.songkick.com/concerts/40624618-herbert-gronemeyer-at-red-bull-arena) | [[venue link]](https://www.songkick.com/venues/1142661-red-bull-arena)
+- Esben and the Witch @ Moritzbastei [[event link]](https://www.songkick.com/concerts/40887489-esben-and-the-witch-at-moritzbastei) | [[venue link]](https://www.songkick.com/venues/36957-moritzbastei)
+- Ne Obliviscaris @ Naumanns (Felsenkeller Leipzig) [[event link]](https://www.songkick.com/concerts/40774353-ne-obliviscaris-at-naumanns) | [[venue link]](https://www.songkick.com/venues/3311504-naumanns)
+- **20:00:** Söhne Mannheims @ Der Anker [[event link]](https://www.songkick.com/concerts/40739027-sohne-mannheims-at-der-anker) | [[venue link]](https://www.songkick.com/venues/59548-der-anker)
+- **19:00:** Schumann @ Schumann-Haus [[event link]](https://www.songkick.com/concerts/40724294-schumann-at-schumannhaus) | [[venue link]](https://www.songkick.com/venues/2853563-schumannhaus)
+- **19:00:** Russian village boys @ Täubchenthal [[event link]](https://www.songkick.com/concerts/40846504-russian-village-boys-at-taubchenthal) | [[venue link]](https://www.songkick.com/venues/2321004-taubchenthal)
+- Fuego A La Isla 2023[[event link]](https://www.songkick.com/festivals/69951-fuego-a-la-isla/id/41038870-fuego-a-la-isla-2023)
+
+## Sonntag, Juni 04, 2023 
+### Planlos Leipzig: 
+- **14:00 - 15:30:** Öffentliche Führung an der Gedenkstätte Ehrenhain ZeithainGedenkstätte Ehrenhain Zeithain, 01619 Zeithain | [[event link]](https://www.planlos-leipzig.org/events/oeffentliche-fuehrung-an-der-gedenkstaette-ehrenhain-zeithain-2023-06-04/)
+
+### Sachsen Punk: 
+- Atacolypse – Laxisme + Ambulanz + Jalapeno Power Poppers + Uncut Primo
+
+### Songkick: 
+- **19:00:** Dobrawa Czocher @ UT Connewitz [[event link]](https://www.songkick.com/concerts/41123106-dobrawa-czocher-at-ut-connewitz) | [[venue link]](https://www.songkick.com/venues/71321-ut-connewitz)
+- **20:00:** Vanina Vincent @ KAYA [[event link]](https://www.songkick.com/concerts/40980249-vanina-vincent-at-kaya) | [[venue link]](https://www.songkick.com/venues/3804874-kaya)
+- **16:00:** Uncut Primo[[event link]](https://www.songkick.com/concerts/41066717-uncut-primo-at-unknown-venue)
+- Bunte Träumerei Open Air 2023[[event link]](https://www.songkick.com/festivals/3064139-bunte-traumerei-open-air/id/41102690-bunte-trumerei-open-air-2023)
+
 ## Montag, Juni 05, 2023 
 ### Sachsen Punk: 
 - Plaque – THE FLEX + Placid
@@ -83,6 +164,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - **12:00:** Les Passions de l'Ame and Hana Blažiková @ Paulinum - /aula Und Universitätskirche St. Pauli [[event link]](https://www.songkick.com/concerts/40584374-les-passions-de-lame-at-paulinum-aula-und-universitatskirche-st-pauli) | [[venue link]](https://www.songkick.com/venues/4144919-paulinum-aula-und-universitatskirche-st-pauli)
 - **23:00:** Outdoor @ Westhafen [[event link]](https://www.songkick.com/concerts/40761166-aio-at-westhafen) | [[venue link]](https://www.songkick.com/venues/4418954-westhafen)
 - **17:00:** Outdoor @ Johannapark [[event link]](https://www.songkick.com/concerts/41166282-gehorwasche-at-johannapark) | [[venue link]](https://www.songkick.com/venues/4509201-johannapark)
+- **19:00:** Schumanns Salon im Rahmen des Bachfestes Leipzig 2023 @ Schumann-Haus [[event link]](https://www.songkick.com/festivals/3405236-schumanns-salon-im-rahmen-des-bachfestes-leipzig/id/40724288-schumanns-salon-im-rahmen-des-bachfestes-leipzig-2023) | [[venue link]](https://www.songkick.com/venues/2853563-schumannhaus)
 
 ## Sonntag, Juni 11, 2023 
 ### Planlos Leipzig: 
@@ -370,4 +452,12 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 ## Freitag, Dezember 22, 2023 
 ### Sachsen Punk: 
 - Werk 2 (Halle D) – Chefdenker + SOKO LiNX + F*cking Angry
+
+## Donnerstag, Januar 25, 2024 
+### Sachsen Punk: 
+- UT Connewitz – Dave Hause
+
+## Freitag, Februar 23, 2024 
+### Sachsen Punk: 
+- Conne Island – Schmutzki
 
