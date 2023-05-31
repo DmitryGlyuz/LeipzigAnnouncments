@@ -1,5 +1,4 @@
 #!/usr/bin/python
-import json
 from datetime import datetime
 import events_combinator
 from itertools import chain

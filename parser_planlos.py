@@ -1,9 +1,10 @@
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
 import requests
 import locale
 import re
+import date_range_setter
 
 locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
 
@@ -23,9 +24,17 @@ def add_spaces(string: str) -> str:
     return result
 
 
+start_date = date_range_setter.start_date
+final_date = date_range_setter.final_date
+
 for header in headers:
-    date_obj = datetime.strptime(header.text, "%a, %d. %B %Y")
-    event_date = str(date_obj.date())
+    current_date = datetime.strptime(header.text, "%a, %d. %B %Y").date()
+    if current_date < start_date:
+        continue
+    if current_date >= final_date:
+        break
+
+    event_date = str(current_date)
     day_table = header.find_next("table")
     events_rows = day_table.find_all("tr")
     for event_row in events_rows:
