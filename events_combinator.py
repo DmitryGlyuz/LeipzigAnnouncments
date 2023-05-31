@@ -30,6 +30,6 @@ def get_events():
 
 
 if __name__ == "__main__":
-    user_input = input("Press Y if you want to create JSON file with announcements").lower()
+    user_input = input("Enter Y if you want to create JSON file with announcements: ").lower()
     if user_input == 'y':
         make_json()

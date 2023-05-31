@@ -5,7 +5,7 @@ Auf dieser Seite finden Sie Ankündigungen für kommende Veranstaltungen in Leip
 - https://sachsenpunk.de/ 
 - https://www.songkick.com/ 
 
-*Letzte Aktualisierung; Mittwoch, Mai 31, 2023 10:51*
+*Letzte Aktualisierung; Mittwoch, Mai 31, 2023 11:01*
 ## Mittwoch, Mai 31, 2023 
 ### Planlos Leipzig: 
 - **18:00:** Die Zerschlagung des Widerstands – Terror gegen links und die Errichtung der frühen KonzentrationslagerLixer Stadtteilladen, Leipzig | [[event link]](https://www.planlos-leipzig.org/events/die-zerschlagung-des-widerstands-terror-gegen-links-und-die-errichtung-der-fruehen-konzentrationslager/)
