@@ -145,8 +145,6 @@ def edit_config_screen():
         else:
             break
 
-    #     TODO Implement configuration editing feature with data format validation
-
 
 CREATE_FILES = "Create files with announcements"
 CREATE_JSON = "Create JSON file with announcements"
