@@ -2,18 +2,8 @@
 from datetime import datetime
 import events_combinator
 from itertools import chain
+from cl_functions import run_after_confirm
 
-
-all_events = events_combinator.get_events()
-
-
-planlos_events = all_events["planlos"]
-sachsenpunk_events = all_events["sachsenpunk"]
-songkick_events = all_events["songkick"]
-
-all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
-all_dates.sort()
-now = datetime.now().strftime("%A, %B %d, %Y %H:%M")
 
 CALENDAR_SYMBOL = '🗓'
 BULLET_SYMBOL = '🔹'
@@ -58,24 +48,38 @@ def make_strings_for_songkick(events: list[dict]) -> list[str]:
     return output_strings
 
 
-events_dicts_handlers = {
-    "🏴 Planlos Leipzig": (planlos_events, make_strings_for_planlos),
-    "🤘 Sachsen Punk": (sachsenpunk_events, make_strings_for_sachsen_punk),
-    "🎵 Songkick": (songkick_events, make_strings_for_songkick)
-}
+def create_files():
+    all_events = events_combinator.get_events()
+    planlos_events = all_events["planlos"]
+    sachsenpunk_events = all_events["sachsenpunk"]
+    songkick_events = all_events["songkick"]
+    all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
+    all_dates.sort()
+    events_dicts_handlers = {
+        "🏴 Planlos Leipzig": (planlos_events, make_strings_for_planlos),
+        "🤘 Sachsen Punk": (sachsenpunk_events, make_strings_for_sachsen_punk),
+        "🎵 Songkick": (songkick_events, make_strings_for_songkick)
+    }
+    for date in all_dates:
+        all_strings = []
+        date_obj = datetime.strptime(date, "%Y-%m-%d")
+        date_str = date_obj.strftime("%A, %B %d, %Y")
+        all_strings.append(f"{CALENDAR_SYMBOL} {date_str}\n\n")
 
-for date in all_dates:
-    all_strings = []
-    date_obj = datetime.strptime(date, "%Y-%m-%d")
-    date_str = date_obj.strftime("%A, %B %d, %Y")
-    all_strings.append(f"{CALENDAR_SYMBOL} {date_str}\n\n")
+        for name, (events_dict, handler) in events_dicts_handlers.items():
+            if date in events_dict:
+                all_strings.append(f"<b>{name}</b>\n")
+                all_strings += handler(events_dict[date])
+                all_strings.append("\n")
 
-    for name, (events_dict, handler) in events_dicts_handlers.items():
-        if date in events_dict:
-            all_strings.append(f"<b>{name}</b>\n")
-            all_strings += handler(events_dict[date])
-            all_strings.append("\n")
+        with open(f"tg_messages/{date}", 'w', encoding='UTF-8') as f:
+            text = ''.join(all_strings)
+            f.write(text)
 
-    with open(f"tg_messages/{date}", 'w', encoding='UTF-8') as f:
-        text = ''.join(all_strings)
-        f.write(text)
+
+def create_files_after_confirm():
+    run_after_confirm("create files with announcements", create_files)
+
+
+if __name__ == "__main__":
+    create_files_after_confirm()

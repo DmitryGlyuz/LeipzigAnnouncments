@@ -1,19 +1,17 @@
 import requests
-import json
 import os
+from config_handler import load_config
+from cl_functions import run_after_confirm
 
-with open("config.json", 'r') as json_file:
-    config = json.load(json_file)
 
-
+config = load_config()
 BOT_TOKEN = config['bot_token']
-CHANNEL_ID = config['channel_id']
 
 
-def send_message(message):
+def send_message(message, channel_id):
     url = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
     data = {
-        'chat_id': CHANNEL_ID,
+        'chat_id': channel_id,
         'text': message,
         'parse_mode': 'HTML'
     }
@@ -24,9 +22,12 @@ def send_message(message):
         print(f'Failed to send message. Error code: {response.status_code}\n')
 
 
-user_input = input("Press Y if you want to post announcements to LPZG channel: ")
-if user_input.lower() == 'y':
+def send_all_messages(channel_id: str):
     for file_name in os.listdir("tg_messages"):
         print(file_name)
-        with open(f"tg_messages/{file_name}", 'r') as f:
-            send_message(f.read())
+        with open(f"tg_messages/{file_name}", 'r', encoding='utf-8') as f:
+            send_message(f.read(), channel_id)
+
+
+def send_messages_after_confirm(channel_id: str):
+    run_after_confirm("post announcements to TESTING channel", send_all_messages, channel_id)
