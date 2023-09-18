@@ -1,18 +1,16 @@
 from datetime import datetime
-from cli_functions import run_after_confirm
-from config_handler import load_config, save_config
-from messages_builder import create_files_after_confirm
-from events_combinator import create_json_after_confirm
-from telegram_sender import send_messages_after_confirm as send_messages
+from cli_functions import run_after_confirm_screen
+from config_handlers import load_config, save_config
+from messages_builder import create_files_screen
+from events_combinator import create_json_screen
+from telegram_sender import send_messages_screen
 import re
 
 config = load_config()
 LPZG_CHANNEL_ID = config['channel_id']
 TESTING_CHANNEL_ID = config['testing_channel_id']
 
-
-def print_line():
-    print(f"{'_' * 50}")
+HORIZONTAL_LINE = '_' * 50
 
 
 def print_config():
@@ -24,13 +22,13 @@ def print_config():
 
 def print_caption(caption: str):
     print(caption)
-    print_line()
+    print(HORIZONTAL_LINE)
 
 
 def print_caption_and_config(caption: str):
     print_caption(caption)
     print_config()
-    print_line()
+    print(HORIZONTAL_LINE)
 
 
 def print_error(message: str):
@@ -73,7 +71,7 @@ def turn_off_reading_data_from_json():
 
 
 def change_setting(message, change_setting_func, *args):
-    run_after_confirm(message, change_setting_func, *args, show_starting=False)
+    run_after_confirm_screen(message, change_setting_func, *args, show_starting=False)
     save_config(config)
 
 
@@ -152,33 +150,35 @@ POST_TO_TESTING = "Post announcements to TESTING channel"
 POST_TO_LPZG = "Post announcements to LPZG channel"
 PRINT_CONFIG = "Print configuration"
 EDIT_CONFIG = "Edit configuration"
-DELETE_FILES = "Delete files with texts for Telegram posts"
+# DELETE_FILES = "Delete files with texts for Telegram posts"
 EXIT = "Exit"
-main_menu_actions = (CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_LPZG, PRINT_CONFIG, EDIT_CONFIG, DELETE_FILES,
-                     EXIT)
+main_menu_actions = (CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_LPZG, PRINT_CONFIG, EDIT_CONFIG, EXIT)
 
 print_caption_and_config("Leipzig Announcements Bot command line interface")
 
 first_run = True
 while True:
-    if not first_run:
+    if first_run:
+        first_run = False
+    else:
         print_caption("Main menu")
-    first_run = False
+
     main_menu_action = choose_item_screen(main_menu_actions)
     if main_menu_action == EXIT:
         break
     elif main_menu_action == CREATE_FILES:
-        create_files_after_confirm()
+        create_files_screen()
     elif main_menu_action == CREATE_JSON:
-        create_json_after_confirm()
+        create_json_screen()
     elif main_menu_action == POST_TO_TESTING:
-        send_messages(TESTING_CHANNEL_ID)
+        send_messages_screen(TESTING_CHANNEL_ID)
     elif main_menu_action == POST_TO_LPZG:
-        send_messages(LPZG_CHANNEL_ID)
+        send_messages_screen(LPZG_CHANNEL_ID)
     elif main_menu_action == PRINT_CONFIG:
         print_config()
-    elif main_menu_action == DELETE_FILES:
-        ...
+        print()
+    # elif main_menu_action == DELETE_FILES:
+    #     ...
     elif main_menu_action == EDIT_CONFIG:
         edit_config_screen()
 

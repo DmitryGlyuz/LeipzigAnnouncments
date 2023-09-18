@@ -1,8 +1,7 @@
-#!/usr/bin/python
 from datetime import datetime
-import events_combinator
+from events_combinator import get_events
 from itertools import chain
-from cli_functions import run_after_confirm
+from cli_functions import run_after_confirm_screen
 
 
 CALENDAR_SYMBOL = '🗓'
@@ -26,10 +25,7 @@ def make_strings_for_planlos(events: list[dict]) -> list[str]:
 
 
 def make_strings_for_sachsen_punk(events: list[str]) -> list[str]:
-    output_strings = []
-    for event in events:
-        output_strings.append(f"{BULLET_SYMBOL} {event}\n\n")
-    return output_strings
+    return [f"{BULLET_SYMBOL} {event}\n\n" for event in events]
 
 
 def make_strings_for_songkick(events: list[dict]) -> list[str]:
@@ -49,10 +45,8 @@ def make_strings_for_songkick(events: list[dict]) -> list[str]:
 
 
 def create_files():
-    all_events = events_combinator.get_events()
-    planlos_events = all_events["planlos"]
-    sachsenpunk_events = all_events["sachsenpunk"]
-    songkick_events = all_events["songkick"]
+    all_events = get_events()
+    planlos_events, sachsenpunk_events, songkick_events = all_events.values()
     all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
     all_dates.sort()
     events_dicts_handlers = {
@@ -77,9 +71,9 @@ def create_files():
             f.write(text)
 
 
-def create_files_after_confirm():
-    run_after_confirm("create files with announcements", create_files)
+def create_files_screen():
+    run_after_confirm_screen("create files with announcements", create_files)
 
 
 if __name__ == "__main__":
-    create_files_after_confirm()
+    create_files_screen()

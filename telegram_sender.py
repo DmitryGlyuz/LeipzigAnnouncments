@@ -1,21 +1,21 @@
 import requests
 import os
-from config_handler import load_config
-from cli_functions import run_after_confirm
+from config_handlers import load_config
+from cli_functions import run_after_confirm_screen
 
 
 config = load_config()
 BOT_TOKEN = config['bot_token']
+URL = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
 
 
 def send_message(message, channel_id):
-    url = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
     data = {
         'chat_id': channel_id,
         'text': message,
         'parse_mode': 'HTML'
     }
-    response = requests.post(url, data=data)
+    response = requests.post(URL, data=data)
     if response.status_code == 200:
         print('Message sent successfully!\n')
     else:
@@ -29,5 +29,5 @@ def send_all_messages(channel_id: str):
             send_message(f.read(), channel_id)
 
 
-def send_messages_after_confirm(channel_id: str):
-    run_after_confirm("post announcements to TESTING channel", send_all_messages, channel_id)
+def send_messages_screen(channel_id: str):
+    run_after_confirm_screen("post announcements to TESTING channel", send_all_messages, channel_id)

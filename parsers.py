@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from collections import defaultdict
-from config_handler import load_config
+from config_handlers import load_config
 import requests
 import locale
 import re

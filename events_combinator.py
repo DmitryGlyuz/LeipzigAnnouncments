@@ -1,13 +1,13 @@
 import json
+from config_handlers import load_config
+from cli_functions import run_after_confirm_screen
 import parsers
-from config_handler import load_config
-from cli_functions import run_after_confirm
 
 
 config = load_config()
 
 
-def get_dict() -> dict:
+def get_events_from_parsers() -> dict:
     all_events = {
             "planlos": parsers.get_planlos_events(),
             "sachsenpunk": parsers.get_sachsenpunk_events(),
@@ -16,23 +16,23 @@ def get_dict() -> dict:
     return all_events
 
 
-def make_json():
+def write_events_to_json():
     with open("all_events.json", 'w') as json_file:
-        json.dump(get_dict(), json_file, indent=4)
+        json.dump(get_events_from_parsers(), json_file, indent=4)
 
 
 def get_events():
-    read_from_json = config["read_events_from_json"]
+    read_from_json = config.get("read_events_from_json", False)
     if read_from_json:
         with open("all_events.json", 'r') as json_events_file:
             return json.load(json_events_file)
     else:
-        return get_dict()
+        return get_events_from_parsers()
 
 
-def create_json_after_confirm():
-    run_after_confirm("create JSON file with announcements", make_json)
+def create_json_screen():
+    run_after_confirm_screen("create JSON file with announcements", write_events_to_json)
 
 
 if __name__ == "__main__":
-    create_json_after_confirm()
+    create_json_screen()
