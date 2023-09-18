@@ -1,7 +1,7 @@
 import requests
 import os
 from config_handler import load_config
-from cl_functions import run_after_confirm
+from cli_functions import run_after_confirm
 
 
 config = load_config()

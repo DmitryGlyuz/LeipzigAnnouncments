@@ -2,7 +2,7 @@
 from datetime import datetime
 import events_combinator
 from itertools import chain
-from cl_functions import run_after_confirm
+from cli_functions import run_after_confirm
 
 
 CALENDAR_SYMBOL = '🗓'

@@ -1,5 +1,5 @@
 from datetime import datetime
-from cl_functions import run_after_confirm
+from cli_functions import run_after_confirm
 from config_handler import load_config, save_config
 from messages_builder import create_files_after_confirm
 from events_combinator import create_json_after_confirm

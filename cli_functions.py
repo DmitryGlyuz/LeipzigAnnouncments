@@ -5,3 +5,5 @@ def run_after_confirm(message: str, func, *args, show_starting=True):
             print("Starting...")
         func(*args)
         print("Done!\n")
+    else:
+        print("Ok, the action is cancelled.")
