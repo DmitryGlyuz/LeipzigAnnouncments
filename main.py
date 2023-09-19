@@ -1,4 +1,5 @@
 from datetime import datetime
+from date_handlers import move_start_date_in_config_week_forward
 from cli_functions import run_after_confirm_screen
 from config_handlers import load_config, save_config
 from messages_builder import create_files_screen
@@ -6,7 +7,6 @@ from events_combinator import create_json_screen
 from telegram_sender import send_messages_screen
 import re
 import os
-
 
 config = load_config()
 LPZG_CHANNEL_ID = config['channel_id']
@@ -16,9 +16,15 @@ HORIZONTAL_LINE = '_' * 50
 
 
 def print_config():
+    # After parsing, the start date may change in the configuration file,
+    # this has no effect on anything in the command line interface except the output of the configuration itself,
+    # but to avoid possible problems in the future, it is updated globally here.
+    global config
+    config = load_config()
     print(f"""Current configuration:
     Read events from JSON: {config["read_events_from_json"]}
     Start date: {config["start_date"]}
+    Move start date property a week_forward after parsing: {config["move_start_date_week_forward_after_parsing"]}
     Days limit: {config["days_limit"]}""")
 
 
@@ -56,35 +62,34 @@ def choose_item_screen(actions: tuple, caption="Available actions:", prompt="Ent
                 return actions[user_choice - 1]
 
 
+# Menu items for configuration editing screen
 READING_FROM_JSON = "Reading data from JSON"
 START_DATE = "Start date"
+MANUALLY_MOVE_START_DATE = "Manually move the start date a week forward"
+MOVE_START_DATE = "Move the start date a week forward after parsing"
 DAYS_LIMIT = "Days limit"
 BACK = "Go back"
 ON = "On"
 OFF = "Off"
 
 
-def turn_on_reading_data_from_json():
-    config["read_events_from_json"] = True
+def set_config_property(_property: str, value):
+    config[_property] = value
 
 
-def turn_off_reading_data_from_json():
-    config["read_events_from_json"] = False
-
-
-def change_setting(message, change_setting_func, *args):
-    run_after_confirm_screen(message, change_setting_func, *args, show_starting=False)
+def change_setting(message, _property: str, value):
+    run_after_confirm_screen(message, set_config_property, _property, value, show_starting=False)
     save_config(config)
 
 
-def edit_reading_from_json_screen():
-    print_caption(f"Edit: {READING_FROM_JSON}")
+def change_boolean_config_property_screen(caption: str, _property):
+    print_caption(f"Edit: {caption}")
     available_options = (ON, OFF, BACK)
     chosen_option = choose_item_screen(available_options, "Available options:")
     if chosen_option == ON:
-        change_setting(f"turn on: {READING_FROM_JSON}", turn_on_reading_data_from_json)
+        change_setting(f"turn on: {caption}", _property, True)
     elif chosen_option == OFF:
-        change_setting(f"turn off: {READING_FROM_JSON}", turn_off_reading_data_from_json)
+        change_setting(f"turn off: {caption}", _property, False)
     else:
         return
 
@@ -99,10 +104,6 @@ def valid_date(date: str):
         return False
 
 
-def change_start_date(new_date: str):
-    config["start_date"] = new_date
-
-
 def edit_start_date_screen():
     while True:
         user_input = input("Input the new start date in YYYY-MM-DD format or press Enter to go back: ").strip()
@@ -111,12 +112,10 @@ def edit_start_date_screen():
         elif not valid_date(user_input):
             print_error("Wrong date format")
         else:
-            change_setting(f"change start date to {user_input}", change_start_date, user_input)
+            change_setting(f"change start date to {user_input}", "start_date", user_input)
             return
 
 
-def change_days_limit(days_limit: int):
-    config["days_limit"] = days_limit
 
 
 def edit_days_limit_screen():
@@ -127,19 +126,24 @@ def edit_days_limit_screen():
         elif not re.fullmatch(r"\d+", user_input) or int(user_input) < 1:
             print_error("Days limit value should be a positive integer number ")
         else:
-            change_setting(f"change days limit to {user_input}", change_days_limit, int(user_input))
+            change_setting(f"change days limit to {user_input}", "days_limit", int(user_input))
             return
 
 
 def edit_config_screen():
     while True:
         print_caption_and_config("Editing configuration")
-        config_items = (READING_FROM_JSON, START_DATE, DAYS_LIMIT, BACK)
+        config_items = (READING_FROM_JSON, START_DATE, MANUALLY_MOVE_START_DATE, MOVE_START_DATE, DAYS_LIMIT, BACK)
         item_to_edit = choose_item_screen(config_items, "Available config items:")
         if item_to_edit == READING_FROM_JSON:
-            edit_reading_from_json_screen()
+            change_boolean_config_property_screen(READING_FROM_JSON, 'read_events_from_json')
         elif item_to_edit == START_DATE:
             edit_start_date_screen()
+        elif item_to_edit == MANUALLY_MOVE_START_DATE:
+            run_after_confirm_screen(MANUALLY_MOVE_START_DATE, move_start_date_in_config_week_forward,
+                                     show_starting=False)
+        elif item_to_edit == MOVE_START_DATE:
+            change_boolean_config_property_screen(MOVE_START_DATE, 'move_start_date_week_forward_after_parsing')
         elif item_to_edit == DAYS_LIMIT:
             edit_days_limit_screen()
         else:

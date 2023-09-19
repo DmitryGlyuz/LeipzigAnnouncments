@@ -1,13 +1,11 @@
 from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import defaultdict
-from config_handlers import load_config
+from date_handlers import get_start_date, get_final_date
 import requests
 import locale
 import re
 
-
-config = load_config()
 
 locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
 
@@ -15,11 +13,9 @@ PLANLOS_URL = "https://www.planlos-leipzig.org/"
 SACHSENPUNK_URL = "https://sachsenpunk.de/dates/"
 SONGKICK_URL = "https://www.songkick.com/metro-areas/28528-germany-leipzig"
 
-start_date_in_config = config["start_date"]
-days_limit = config["days_limit"]
 
-start_date = (datetime.strptime(start_date_in_config, "%Y-%m-%d") if start_date_in_config else datetime.now()).date()
-final_date = start_date + timedelta(days=days_limit)
+start_date = get_start_date()
+final_date = get_final_date()
 
 
 def add_spaces(string: str) -> str:
