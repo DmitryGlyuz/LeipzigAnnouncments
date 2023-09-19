@@ -2,14 +2,14 @@ from datetime import datetime
 from date_handlers import move_start_date_in_config_week_forward
 from cli_functions import run_after_confirm_screen
 from config_handlers import load_config, save_config
-from messages_builder import create_files_screen
-from events_combinator import create_json_screen
-from telegram_sender import send_messages_screen
+from messages_builder import create_files
+from events_combinator import write_events_to_json
+from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
 import re
 import os
 
 config = load_config()
-LPZG_CHANNEL_ID = config['channel_id']
+MAIN_CHANNEL_ID = config['channel_id']
 TESTING_CHANNEL_ID = config['testing_channel_id']
 
 HORIZONTAL_LINE = '_' * 50
@@ -116,8 +116,6 @@ def edit_start_date_screen():
             return
 
 
-
-
 def edit_days_limit_screen():
     while True:
         user_input = input("Input the new days limit format or press Enter to go back: ").strip()
@@ -159,16 +157,20 @@ def delete_all_files_with_messages():
             print(f"{file_path} - deleted")
 
 
+PARSE_AND_SEND_TO_TESTING = "Parse websites and send messages directly to the TESTING channel"
+PARSE_AND_SEND_TO_MAIN = "Parse websites and send messages directly to the MAIN channel"
 CREATE_FILES = "Create files with announcements"
 CREATE_JSON = "Create JSON file with announcements"
-POST_TO_TESTING = "Post announcements to TESTING channel"
-POST_TO_LPZG = "Post announcements to LPZG channel"
+POST_TO_TESTING = "Post announcements from files to the TESTING channel"
+POST_TO_MAIN = "Post announcements from files to the MAIN channel"
 PRINT_CONFIG = "Print configuration"
 EDIT_CONFIG = "Edit configuration"
 DELETE_FILES = "Delete files with texts for Telegram posts"
 EXIT = "Exit"
 main_menu_actions = (
-    CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_LPZG, PRINT_CONFIG, DELETE_FILES, EDIT_CONFIG, EXIT)
+    PARSE_AND_SEND_TO_TESTING, PARSE_AND_SEND_TO_MAIN, CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_MAIN,
+    PRINT_CONFIG, DELETE_FILES,
+    EDIT_CONFIG, EXIT)
 
 print_caption_and_config("Leipzig Announcements Bot command line interface")
 
@@ -182,14 +184,18 @@ while True:
     main_menu_action = choose_item_screen(main_menu_actions)
     if main_menu_action == EXIT:
         break
+    elif main_menu_action == PARSE_AND_SEND_TO_TESTING:
+        run_after_confirm_screen(PARSE_AND_SEND_TO_TESTING, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
+    elif main_menu_action == PARSE_AND_SEND_TO_MAIN:
+        run_after_confirm_screen(PARSE_AND_SEND_TO_MAIN, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
     elif main_menu_action == CREATE_FILES:
-        create_files_screen()
+        run_after_confirm_screen(CREATE_FILES, create_files)
     elif main_menu_action == CREATE_JSON:
-        create_json_screen()
+        run_after_confirm_screen(CREATE_JSON, write_events_to_json)
     elif main_menu_action == POST_TO_TESTING:
-        send_messages_screen(TESTING_CHANNEL_ID)
-    elif main_menu_action == POST_TO_LPZG:
-        send_messages_screen(LPZG_CHANNEL_ID)
+        run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, TESTING_CHANNEL_ID)
+    elif main_menu_action == POST_TO_MAIN:
+        run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, MAIN_CHANNEL_ID)
     elif main_menu_action == PRINT_CONFIG:
         print_config()
         print()

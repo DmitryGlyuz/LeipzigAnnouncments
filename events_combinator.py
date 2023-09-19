@@ -32,15 +32,8 @@ def get_events():
         events = get_events_from_parsers()
     if move_start_date_week_forward_after_parsing:
         move_start_date_in_config_week_forward()
-        save
     return events
-
-
 
 
 def create_json_screen():
     run_after_confirm_screen("create JSON file with announcements", write_events_to_json)
-
-
-if __name__ == "__main__":
-    create_json_screen()

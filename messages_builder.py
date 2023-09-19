@@ -1,7 +1,6 @@
 from datetime import datetime
 from events_combinator import get_events
 from itertools import chain
-from cli_functions import run_after_confirm_screen
 
 
 CALENDAR_SYMBOL = '🗓'
@@ -44,7 +43,7 @@ def make_strings_for_songkick(events: list[dict]) -> list[str]:
     return output_strings
 
 
-def create_files():
+def messages_generator():
     all_events = get_events()
     planlos_events, sachsenpunk_events, songkick_events = all_events.values()
     all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
@@ -65,15 +64,12 @@ def create_files():
                 all_strings.append(f"<b>{name}</b>\n")
                 all_strings += handler(events_dict[date])
                 all_strings.append("\n")
+        message_text = ''.join(all_strings)
+        yield date, message_text
 
+
+def create_files():
+    dates_and_messages = messages_generator()
+    for date, message in dates_and_messages:
         with open(f"tg_messages/{date}", 'w', encoding='UTF-8') as f:
-            text = ''.join(all_strings)
-            f.write(text)
-
-
-def create_files_screen():
-    run_after_confirm_screen("create files with announcements", create_files)
-
-
-if __name__ == "__main__":
-    create_files_screen()
+            f.write(message)

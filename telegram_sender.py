@@ -1,7 +1,7 @@
 import requests
 import os
+from messages_builder import messages_generator
 from config_handlers import load_config
-from cli_functions import run_after_confirm_screen
 
 
 config = load_config()
@@ -22,12 +22,15 @@ def send_message(message, channel_id):
         print(f'Failed to send message. Error code: {response.status_code}\n')
 
 
-def send_all_messages(channel_id: str):
+def parse_websites_and_send_messages(channel_id: str):
+    dates_and_messages = messages_generator()
+    for date, message_text in dates_and_messages:
+        print(date)
+        send_message(message_text, channel_id)
+
+
+def send_messages_from_files(channel_id: str):
     for file_name in os.listdir("tg_messages"):
         print(file_name)
         with open(f"tg_messages/{file_name}", 'r', encoding='utf-8') as f:
             send_message(f.read(), channel_id)
-
-
-def send_messages_screen(channel_id: str):
-    run_after_confirm_screen("post announcements to TESTING channel", send_all_messages, channel_id)
