@@ -5,6 +5,8 @@ from messages_builder import create_files_screen
 from events_combinator import create_json_screen
 from telegram_sender import send_messages_screen
 import re
+import os
+
 
 config = load_config()
 LPZG_CHANNEL_ID = config['channel_id']
@@ -144,15 +146,25 @@ def edit_config_screen():
             break
 
 
+def delete_all_files_with_messages():
+    dir_path = "tg_messages"
+    for filename in os.listdir(dir_path):
+        file_path = os.path.join(dir_path, filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+            print(f"{file_path} - deleted")
+
+
 CREATE_FILES = "Create files with announcements"
 CREATE_JSON = "Create JSON file with announcements"
 POST_TO_TESTING = "Post announcements to TESTING channel"
 POST_TO_LPZG = "Post announcements to LPZG channel"
 PRINT_CONFIG = "Print configuration"
 EDIT_CONFIG = "Edit configuration"
-# DELETE_FILES = "Delete files with texts for Telegram posts"
+DELETE_FILES = "Delete files with texts for Telegram posts"
 EXIT = "Exit"
-main_menu_actions = (CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_LPZG, PRINT_CONFIG, EDIT_CONFIG, EXIT)
+main_menu_actions = (
+    CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_LPZG, PRINT_CONFIG, DELETE_FILES, EDIT_CONFIG, EXIT)
 
 print_caption_and_config("Leipzig Announcements Bot command line interface")
 
@@ -177,8 +189,8 @@ while True:
     elif main_menu_action == PRINT_CONFIG:
         print_config()
         print()
-    # elif main_menu_action == DELETE_FILES:
-    #     ...
+    elif main_menu_action == DELETE_FILES:
+        run_after_confirm_screen(DELETE_FILES, delete_all_files_with_messages)
     elif main_menu_action == EDIT_CONFIG:
         edit_config_screen()
 
