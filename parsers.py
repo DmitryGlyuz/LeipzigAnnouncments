@@ -1,12 +1,14 @@
-from bs4 import BeautifulSoup
-from datetime import datetime
-from collections import defaultdict
-from config_handlers import load_config
-from date_handlers import get_start_date, get_final_date, move_start_date_in_config_week_forward
-import requests
 import locale
 import re
+from collections import defaultdict
+from datetime import datetime
 
+import requests
+from bs4 import BeautifulSoup
+from requests.exceptions import RequestException
+
+from config_handlers import load_config
+from date_handlers import get_start_date, get_final_date, move_start_date_in_config_week_forward
 
 locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
 
@@ -28,12 +30,19 @@ def add_spaces(string: str) -> str:
 
 
 def get_soup(url):
-    r = requests.get(url)
-    return BeautifulSoup(r.content, 'html.parser')
+    try:
+        r = requests.get(url)
+        r.raise_for_status()
+        return BeautifulSoup(r.content, 'html.parser')
+    except RequestException as e:
+        print(f"An error occurred while fetching data from {url}: {str(e)}")
+        return None
 
 
 def get_planlos_events():
     soup = get_soup(PLANLOS_URL)
+    if not soup:
+        return {}
     entry_content = soup.find('div', {"class": "entry-content"})
     headers = entry_content.find_all('h3')
     events = defaultdict(list)
@@ -63,6 +72,8 @@ def get_planlos_events():
 
 def get_sachsenpunk_events():
     soup = get_soup(SACHSENPUNK_URL)
+    if not soup:
+        return {}
     entry_content = soup.find('div', {"class": "entry-content"})
     p_tags = entry_content.find_all('p')
     events = defaultdict(list)
@@ -96,6 +107,8 @@ def get_sachsenpunk_events():
 
 def get_songkick_events():
     soup = get_soup(SONGKICK_URL)
+    if not soup:
+        return {}
     event_elements = soup.find_all('li', {"class": "event-listings-element"})
     events = defaultdict(list)
 
