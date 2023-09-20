@@ -1,9 +1,7 @@
 from datetime import datetime
 from date_handlers import move_start_date_in_config_week_forward
-from cli_functions import run_after_confirm_screen
-from config_handlers import load_config, save_config
+from config_handlers import load_config, set_config_property
 from messages_builder import create_files
-from events_combinator import write_events_to_json
 from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
 import re
 import os
@@ -15,14 +13,28 @@ TESTING_CHANNEL_ID = config['testing_channel_id']
 HORIZONTAL_LINE = '_' * 50
 
 
+def run_after_confirm_screen(message: str, func, *args, show_starting=True):
+    if message[0].isupper():
+        original_letter = message[0]
+        lowercase_letter = original_letter.lower()
+        message = message.replace(original_letter, lowercase_letter, 1)
+    user_input = input(f"Press Y if you want to {message}: ")
+    if user_input.lower() == 'y':
+        if show_starting:
+            print("Starting...")
+        func(*args)
+        print("Done!\n")
+    else:
+        print("Ok, the action is cancelled.")
+
+
+def update_config():
+    config.update(load_config())
+
+
 def print_config():
-    # After parsing, the start date may change in the configuration file,
-    # this has no effect on anything in the command line interface except the output of the configuration itself,
-    # but to avoid possible problems in the future, it is updated globally here.
-    global config
-    config = load_config()
+    update_config()
     print(f"""Current configuration:
-    Read events from JSON: {config["read_events_from_json"]}
     Start date: {config["start_date"]}
     Move start date property a week_forward after parsing: {config["move_start_date_week_forward_after_parsing"]}
     Days limit: {config["days_limit"]}""")
@@ -47,7 +59,6 @@ def choose_item_screen(actions: tuple, caption="Available actions:", prompt="Ent
     print(f"\n{caption}")
     for index, action in enumerate(actions):
         print(f"{index + 1}. {action}")
-
     while True:
         user_choice = input(prompt)
         if not user_choice.isdigit():
@@ -63,7 +74,6 @@ def choose_item_screen(actions: tuple, caption="Available actions:", prompt="Ent
 
 
 # Menu items for configuration editing screen
-READING_FROM_JSON = "Reading data from JSON"
 START_DATE = "Start date"
 MANUALLY_MOVE_START_DATE = "Manually move the start date a week forward"
 MOVE_START_DATE = "Move the start date a week forward after parsing"
@@ -73,13 +83,9 @@ ON = "On"
 OFF = "Off"
 
 
-def set_config_property(_property: str, value):
-    config[_property] = value
-
-
 def change_setting(message, _property: str, value):
     run_after_confirm_screen(message, set_config_property, _property, value, show_starting=False)
-    save_config(config)
+    update_config()
 
 
 def change_boolean_config_property_screen(caption: str, _property):
@@ -131,15 +137,12 @@ def edit_days_limit_screen():
 def edit_config_screen():
     while True:
         print_caption_and_config("Editing configuration")
-        config_items = (READING_FROM_JSON, START_DATE, MANUALLY_MOVE_START_DATE, MOVE_START_DATE, DAYS_LIMIT, BACK)
+        config_items = (START_DATE, MANUALLY_MOVE_START_DATE, MOVE_START_DATE, DAYS_LIMIT, BACK)
         item_to_edit = choose_item_screen(config_items, "Available config items:")
-        if item_to_edit == READING_FROM_JSON:
-            change_boolean_config_property_screen(READING_FROM_JSON, 'read_events_from_json')
-        elif item_to_edit == START_DATE:
+        if item_to_edit == START_DATE:
             edit_start_date_screen()
         elif item_to_edit == MANUALLY_MOVE_START_DATE:
-            run_after_confirm_screen(MANUALLY_MOVE_START_DATE, move_start_date_in_config_week_forward,
-                                     show_starting=False)
+            run_after_confirm_screen(MANUALLY_MOVE_START_DATE, move_start_date_in_config_week_forward,                     show_starting=False)
         elif item_to_edit == MOVE_START_DATE:
             change_boolean_config_property_screen(MOVE_START_DATE, 'move_start_date_week_forward_after_parsing')
         elif item_to_edit == DAYS_LIMIT:
@@ -157,10 +160,10 @@ def delete_all_files_with_messages():
             print(f"{file_path} - deleted")
 
 
+# Main menu items
 PARSE_AND_SEND_TO_TESTING = "Parse websites and send messages directly to the TESTING channel"
 PARSE_AND_SEND_TO_MAIN = "Parse websites and send messages directly to the MAIN channel"
 CREATE_FILES = "Create files with announcements"
-CREATE_JSON = "Create JSON file with announcements"
 POST_TO_TESTING = "Post announcements from files to the TESTING channel"
 POST_TO_MAIN = "Post announcements from files to the MAIN channel"
 PRINT_CONFIG = "Print configuration"
@@ -168,7 +171,7 @@ EDIT_CONFIG = "Edit configuration"
 DELETE_FILES = "Delete files with texts for Telegram posts"
 EXIT = "Exit"
 main_menu_actions = (
-    PARSE_AND_SEND_TO_TESTING, PARSE_AND_SEND_TO_MAIN, CREATE_FILES, CREATE_JSON, POST_TO_TESTING, POST_TO_MAIN,
+    PARSE_AND_SEND_TO_TESTING, PARSE_AND_SEND_TO_MAIN, CREATE_FILES, POST_TO_TESTING, POST_TO_MAIN,
     PRINT_CONFIG, DELETE_FILES,
     EDIT_CONFIG, EXIT)
 
@@ -190,8 +193,6 @@ while True:
         run_after_confirm_screen(PARSE_AND_SEND_TO_MAIN, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
     elif main_menu_action == CREATE_FILES:
         run_after_confirm_screen(CREATE_FILES, create_files)
-    elif main_menu_action == CREATE_JSON:
-        run_after_confirm_screen(CREATE_JSON, write_events_to_json)
     elif main_menu_action == POST_TO_TESTING:
         run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, TESTING_CHANNEL_ID)
     elif main_menu_action == POST_TO_MAIN:

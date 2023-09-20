@@ -1,4 +1,4 @@
-from config_handlers import load_config, save_config
+from config_handlers import load_config, save_config, set_config_property
 from datetime import datetime, timedelta
 
 
@@ -24,5 +24,4 @@ def move_start_date_in_config_week_forward() -> None:
     start_date = get_start_date()
     new_date = get_shifted_date(start_date, 7)
     new_date_string = new_date.strftime("%Y-%m-%d")
-    config['start_date'] = new_date_string
-    save_config(config)
+    set_config_property('start_date', new_date_string)

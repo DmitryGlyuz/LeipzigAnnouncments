@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 from datetime import datetime
 from collections import defaultdict
-from date_handlers import get_start_date, get_final_date
+from config_handlers import load_config
+from date_handlers import get_start_date, get_final_date, move_start_date_in_config_week_forward
 import requests
 import locale
 import re
@@ -137,4 +138,17 @@ def get_songkick_events():
             venue_name = venue_link.text
         event['venue_name'] = venue_name
         event['venue_URL'] = venue_url
+    return events
+
+
+def get_all_events() -> dict:
+    config = load_config()
+    move_start_date__forward = config["move_start_date_week_forward_after_parsing"]
+    events = {
+            "planlos": get_planlos_events(),
+            "sachsenpunk": get_sachsenpunk_events(),
+            "songkick": get_songkick_events()
+        }
+    if move_start_date__forward:
+        move_start_date_in_config_week_forward()
     return events

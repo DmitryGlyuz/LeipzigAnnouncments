@@ -1,5 +1,5 @@
 from datetime import datetime
-from events_combinator import get_events
+from parsers import get_all_events
 from itertools import chain
 
 
@@ -44,7 +44,7 @@ def make_strings_for_songkick(events: list[dict]) -> list[str]:
 
 
 def messages_generator():
-    all_events = get_events()
+    all_events = get_all_events()
     planlos_events, sachsenpunk_events, songkick_events = all_events.values()
     all_dates = list(set(chain(planlos_events, sachsenpunk_events, songkick_events)))
     all_dates.sort()
