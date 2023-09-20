@@ -10,6 +10,16 @@ class InvalidConfigError(Exception):
     pass
 
 
+def validate_bot_token(token: str):
+    if not re.match(r"\d+:.*", token):
+        raise InvalidConfigError("Wrong bot token format")
+
+
+def validate_channel_id(channel_id: str):
+    if not re.match(r"-\d+", channel_id):
+        raise InvalidConfigError("Wrong channel ID format")
+
+
 def validate_date(date: str):
     error_message = "Wrong date format. The start date should have YYYY-MM-DD format"
     try:
@@ -48,6 +58,9 @@ def validate_config_format(config: dict):
         if not isinstance(config[expected_key], expected_type):
             raise InvalidConfigError(f"Value for {expected_key} should be {expected_type}")
 
+    validate_bot_token(config["bot_token"])
+    validate_channel_id(config["channel_id"])
+    validate_channel_id(config["testing_channel_id"])
     validate_date(config["start_date"])
     validate_days_limit(config["days_limit"])
 
@@ -60,6 +73,7 @@ def load_config():
 
 
 def save_config(config: dict):
+    validate_config_format(config)
     with open(CONFIG_FILE_PATH, 'w') as json_file:
         json.dump(config, json_file, indent=4)
 

@@ -1,11 +1,13 @@
-from date_handlers import move_start_date_in_config_week_forward
-from config_handlers import load_config, set_config_property, validate_date, validate_days_limit, InvalidConfigError
-from messages_builder import create_files
-from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
 import os
 
+from config_handlers import load_config, set_config_property, InvalidConfigError
+from date_handlers import move_start_date_in_config_week_forward
+from messages_builder import create_files
+from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
 
 config = load_config()
+
+
 MAIN_CHANNEL_ID = config['channel_id']
 TESTING_CHANNEL_ID = config['testing_channel_id']
 
@@ -105,7 +107,6 @@ def edit_start_date_screen():
         if not user_input:
             return
         try:
-            validate_date(user_input)
             change_setting(f"change start date to {user_input}", "start_date", user_input)
             return
         except InvalidConfigError as e:
@@ -118,7 +119,6 @@ def edit_days_limit_screen():
         if not user_input:
             return
         try:
-            validate_days_limit(user_input)
             change_setting(f"change days limit to {user_input}", "days_limit", int(user_input))
             return
         except InvalidConfigError as e:
@@ -162,12 +162,13 @@ PRINT_CONFIG = "Print configuration"
 EDIT_CONFIG = "Edit configuration"
 DELETE_FILES = "Delete files with texts for Telegram posts"
 EXIT = "Exit"
+
+print_caption_and_config("Leipzig Announcements Bot command line interface")
+
 main_menu_actions = (
     PARSE_AND_SEND_TO_TESTING, PARSE_AND_SEND_TO_MAIN, CREATE_FILES, POST_TO_TESTING, POST_TO_MAIN,
     PRINT_CONFIG, DELETE_FILES,
     EDIT_CONFIG, EXIT)
-
-print_caption_and_config("Leipzig Announcements Bot command line interface")
 
 first_run = True
 while True:
