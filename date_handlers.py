@@ -1,5 +1,6 @@
-from config_handlers import load_config, save_config, set_config_property
+from config_handlers import load_config, set_config_property, InvalidConfigError
 from datetime import datetime, timedelta
+import re
 
 
 config = load_config()
@@ -25,3 +26,5 @@ def move_start_date_in_config_week_forward() -> None:
     new_date = get_shifted_date(start_date, 7)
     new_date_string = new_date.strftime("%Y-%m-%d")
     set_config_property('start_date', new_date_string)
+
+

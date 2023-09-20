@@ -1,10 +1,9 @@
-from datetime import datetime
 from date_handlers import move_start_date_in_config_week_forward
-from config_handlers import load_config, set_config_property
+from config_handlers import load_config, set_config_property, validate_date, validate_days_limit, InvalidConfigError
 from messages_builder import create_files
 from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
-import re
 import os
+
 
 config = load_config()
 MAIN_CHANNEL_ID = config['channel_id']
@@ -100,26 +99,17 @@ def change_boolean_config_property_screen(caption: str, _property):
         return
 
 
-def valid_date(date: str):
-    if not re.fullmatch(r"""\d{4}-\d{2}-\d{2}""", date):
-        return False
-    try:
-        datetime.strptime(date, "%Y-%m-%d")
-        return True
-    except ValueError:
-        return False
-
-
 def edit_start_date_screen():
     while True:
         user_input = input("Input the new start date in YYYY-MM-DD format or press Enter to go back: ").strip()
         if not user_input:
             return
-        elif not valid_date(user_input):
-            print_error("Wrong date format")
-        else:
+        try:
+            validate_date(user_input)
             change_setting(f"change start date to {user_input}", "start_date", user_input)
             return
+        except InvalidConfigError as e:
+            print_error(e.__str__())
 
 
 def edit_days_limit_screen():
@@ -127,11 +117,12 @@ def edit_days_limit_screen():
         user_input = input("Input the new days limit format or press Enter to go back: ").strip()
         if not user_input:
             return
-        elif not re.fullmatch(r"\d+", user_input) or int(user_input) < 1:
-            print_error("Days limit value should be a positive integer number ")
-        else:
+        try:
+            validate_days_limit(user_input)
             change_setting(f"change days limit to {user_input}", "days_limit", int(user_input))
             return
+        except InvalidConfigError as e:
+            print_error(e.__str__())
 
 
 def edit_config_screen():
@@ -142,7 +133,8 @@ def edit_config_screen():
         if item_to_edit == START_DATE:
             edit_start_date_screen()
         elif item_to_edit == MANUALLY_MOVE_START_DATE:
-            run_after_confirm_screen(MANUALLY_MOVE_START_DATE, move_start_date_in_config_week_forward,                     show_starting=False)
+            run_after_confirm_screen(MANUALLY_MOVE_START_DATE, move_start_date_in_config_week_forward,
+                                     show_starting=False)
         elif item_to_edit == MOVE_START_DATE:
             change_boolean_config_property_screen(MOVE_START_DATE, 'move_start_date_week_forward_after_parsing')
         elif item_to_edit == DAYS_LIMIT:

@@ -1,4 +1,6 @@
+from datetime import datetime
 import json
+import re
 
 
 CONFIG_FILE_PATH = "config.json"
@@ -6,6 +8,27 @@ CONFIG_FILE_PATH = "config.json"
 
 class InvalidConfigError(Exception):
     pass
+
+
+def validate_date(date: str):
+    error_message = "Wrong date format. The start date should have YYYY-MM-DD format"
+    try:
+        if not re.fullmatch(r"""\d{4}-\d{2}-\d{2}""", date):
+            raise ValueError()
+        datetime.strptime(date, "%Y-%m-%d")
+    except ValueError:
+        raise InvalidConfigError(error_message)
+
+
+def validate_days_limit(days_limit):
+    error_message = "Days limit value should be a positive integer number"
+    if isinstance(days_limit, str):
+        if not re.fullmatch(r"\d+", days_limit):
+            raise InvalidConfigError(error_message)
+        else:
+            days_limit = int(days_limit)
+    if days_limit < 1:
+        raise InvalidConfigError(error_message)
 
 
 def validate_config_format(config: dict):
@@ -25,6 +48,9 @@ def validate_config_format(config: dict):
         if not isinstance(config[expected_key], expected_type):
             raise InvalidConfigError(f"Value for {expected_key} should be {expected_type}")
 
+    validate_date(config["start_date"])
+    validate_days_limit(config["days_limit"])
+
 
 def load_config():
     with open(CONFIG_FILE_PATH, 'r') as json_file:
@@ -38,14 +64,7 @@ def save_config(config: dict):
         json.dump(config, json_file, indent=4)
 
 
-def set_config_property(_property: str, value):
+def set_config_property(_property: str, _value):
     config = load_config()
-    config[_property] = value
+    config[_property] = _value
     save_config(config)
-
-
-if __name__ == "__main__":
-    for property, value in load_config().items():
-        print(f"Property: {property}\n"
-              f"Value: {value}\n"
-              f"Value type: {type(value)}\n\n")
