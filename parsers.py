@@ -73,15 +73,16 @@ def get_sachsenpunk_events(start_date: datetime.date, final_date: datetime.date)
     entry_content = soup.find('div', {"class": "entry-content"})
     p_tags = entry_content.find_all('p')
     events = defaultdict(list)
-    current_year = datetime.now().year
+    year_niw = datetime.now().year
+    month_now = datetime.now().month
     previous_month = 0
-    year = current_year
+    year = year_niw
 
     for p in p_tags:
         if re.match(r"\d+\.\d+\.", p.text):
             # Checking if there is announcement for the new year
             current_month = int(p.text[3:5])
-            if previous_month and current_month < previous_month:
+            if current_month < previous_month or (month_now == 12 and current_month == 1):
                 year += 1
             previous_month = current_month
 
