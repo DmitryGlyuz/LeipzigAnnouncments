@@ -5,11 +5,16 @@ from date_handlers import move_start_date_in_config_week_forward
 from messages_builder import create_files
 from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
 
-config = load_config()
-
-
-MAIN_CHANNEL_ID = config['channel_id']
-TESTING_CHANNEL_ID = config['testing_channel_id']
+config_is_valid = False
+try:
+    config = load_config()
+    MAIN_CHANNEL_ID = config['channel_id']
+    TESTING_CHANNEL_ID = config['testing_channel_id']
+    config_is_valid = True
+except InvalidConfigError as e:
+    print(f"Error in configuration file: {e}")
+except FileNotFoundError:
+    print("Error: Configuration file not found")
 
 HORIZONTAL_LINE = '_' * 50
 
@@ -109,8 +114,8 @@ def edit_start_date_screen():
         try:
             change_setting(f"change start date to {user_input}", "start_date", user_input)
             return
-        except InvalidConfigError as e:
-            print_error(e.__str__())
+        except InvalidConfigError as config_error:
+            print_error(str(config_error))
 
 
 def edit_days_limit_screen():
@@ -121,8 +126,8 @@ def edit_days_limit_screen():
         try:
             change_setting(f"change days limit to {user_input}", "days_limit", int(user_input))
             return
-        except InvalidConfigError as e:
-            print_error(e.__str__())
+        except InvalidConfigError as config_error:
+            print_error(str(config_error))
 
 
 def edit_config_screen():
@@ -163,39 +168,43 @@ EDIT_CONFIG = "Edit configuration"
 DELETE_FILES = "Delete files with texts for Telegram posts"
 EXIT = "Exit"
 
-print_caption_and_config("Leipzig Announcements Bot command line interface")
 
-main_menu_actions = (
-    PARSE_AND_SEND_TO_TESTING, PARSE_AND_SEND_TO_MAIN, CREATE_FILES, POST_TO_TESTING, POST_TO_MAIN,
-    PRINT_CONFIG, DELETE_FILES,
-    EDIT_CONFIG, EXIT)
+def main_menu():
+    print_caption_and_config("Leipzig Announcements Bot command line interface")
+    main_menu_actions = (
+        PARSE_AND_SEND_TO_TESTING, PARSE_AND_SEND_TO_MAIN, CREATE_FILES, POST_TO_TESTING, POST_TO_MAIN,
+        PRINT_CONFIG, DELETE_FILES,
+        EDIT_CONFIG, EXIT)
 
-first_run = True
-while True:
-    if first_run:
-        first_run = False
-    else:
-        print_caption("Main menu")
+    first_run = True
+    while True:
+        if first_run:
+            first_run = False
+        else:
+            print_caption("Main menu")
 
-    main_menu_action = choose_item_screen(main_menu_actions)
-    if main_menu_action == EXIT:
-        break
-    elif main_menu_action == PARSE_AND_SEND_TO_TESTING:
-        run_after_confirm_screen(PARSE_AND_SEND_TO_TESTING, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
-    elif main_menu_action == PARSE_AND_SEND_TO_MAIN:
-        run_after_confirm_screen(PARSE_AND_SEND_TO_MAIN, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
-    elif main_menu_action == CREATE_FILES:
-        run_after_confirm_screen(CREATE_FILES, create_files)
-    elif main_menu_action == POST_TO_TESTING:
-        run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, TESTING_CHANNEL_ID)
-    elif main_menu_action == POST_TO_MAIN:
-        run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, MAIN_CHANNEL_ID)
-    elif main_menu_action == PRINT_CONFIG:
-        print_config()
-        print()
-    elif main_menu_action == DELETE_FILES:
-        run_after_confirm_screen(DELETE_FILES, delete_all_files_with_messages)
-    elif main_menu_action == EDIT_CONFIG:
-        edit_config_screen()
+        main_menu_action = choose_item_screen(main_menu_actions)
+        if main_menu_action == EXIT:
+            break
+        elif main_menu_action == PARSE_AND_SEND_TO_TESTING:
+            run_after_confirm_screen(PARSE_AND_SEND_TO_TESTING, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
+        elif main_menu_action == PARSE_AND_SEND_TO_MAIN:
+            run_after_confirm_screen(PARSE_AND_SEND_TO_MAIN, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
+        elif main_menu_action == CREATE_FILES:
+            run_after_confirm_screen(CREATE_FILES, create_files)
+        elif main_menu_action == POST_TO_TESTING:
+            run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, TESTING_CHANNEL_ID)
+        elif main_menu_action == POST_TO_MAIN:
+            run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, MAIN_CHANNEL_ID)
+        elif main_menu_action == PRINT_CONFIG:
+            print_config()
+            print()
+        elif main_menu_action == DELETE_FILES:
+            run_after_confirm_screen(DELETE_FILES, delete_all_files_with_messages)
+        elif main_menu_action == EDIT_CONFIG:
+            edit_config_screen()
 
+
+if config_is_valid:
+    main_menu()
 print("Bye!")

@@ -17,10 +17,6 @@ SACHSENPUNK_URL = "https://sachsenpunk.de/dates/"
 SONGKICK_URL = "https://www.songkick.com/metro-areas/28528-germany-leipzig"
 
 
-start_date = get_start_date()
-final_date = get_final_date()
-
-
 def add_spaces(string: str) -> str:
     result = string
     pattern = r'([a-zA-ZÄÃ¤ÖÜäöüß-]+)(\d{2}\.)|(\d{1,2}:\d{2})(\d{2}.\d{2}.\d{4})'
@@ -39,7 +35,7 @@ def get_soup(url):
         return None
 
 
-def get_planlos_events():
+def get_planlos_events(start_date: datetime.date, final_date: datetime.date):
     soup = get_soup(PLANLOS_URL)
     if not soup:
         return {}
@@ -70,7 +66,7 @@ def get_planlos_events():
     return events
 
 
-def get_sachsenpunk_events():
+def get_sachsenpunk_events(start_date: datetime.date, final_date: datetime.date):
     soup = get_soup(SACHSENPUNK_URL)
     if not soup:
         return {}
@@ -105,7 +101,7 @@ def get_sachsenpunk_events():
     return events
 
 
-def get_songkick_events():
+def get_songkick_events(start_date: datetime.date, final_date: datetime.date):
     soup = get_soup(SONGKICK_URL)
     if not soup:
         return {}
@@ -156,12 +152,15 @@ def get_songkick_events():
 
 def get_all_events() -> dict:
     config = load_config()
-    move_start_date__forward = config["move_start_date_week_forward_after_parsing"]
+    start_date = get_start_date(config)
+    final_date = get_final_date(config)
+
     events = {
-            "planlos": get_planlos_events(),
-            "sachsenpunk": get_sachsenpunk_events(),
-            "songkick": get_songkick_events()
-        }
+        "planlos": get_planlos_events(start_date, final_date),
+        "sachsenpunk": get_sachsenpunk_events(start_date, final_date),
+        "songkick": get_songkick_events(start_date, final_date)
+    }
+    move_start_date__forward = config["move_start_date_week_forward_after_parsing"]
     if move_start_date__forward:
         move_start_date_in_config_week_forward()
     return events

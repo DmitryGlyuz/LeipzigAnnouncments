@@ -1,7 +1,6 @@
-from datetime import datetime
 import json
 import re
-
+from datetime import datetime
 
 CONFIG_FILE_PATH = "config.json"
 

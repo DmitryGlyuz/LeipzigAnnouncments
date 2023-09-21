@@ -1,21 +1,21 @@
-import requests
 import os
-from messages_builder import messages_generator
+
+import requests
+
 from config_handlers import load_config
-
-
-config = load_config()
-BOT_TOKEN = config['bot_token']
-URL = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
+from messages_builder import messages_generator
 
 
 def send_message(message, channel_id):
+    config = load_config()
+    bot_token = config['bot_token']
+    url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
     data = {
         'chat_id': channel_id,
         'text': message,
         'parse_mode': 'HTML'
     }
-    response = requests.post(URL, data=data)
+    response = requests.post(url, data=data)
     if response.status_code == 200:
         print('Message sent successfully!\n')
     else:
