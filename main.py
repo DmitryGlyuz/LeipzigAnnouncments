@@ -194,7 +194,7 @@ def main_menu():
         elif main_menu_action == PARSE_AND_SEND_TO_TESTING:
             run_after_confirm_screen(PARSE_AND_SEND_TO_TESTING, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
         elif main_menu_action == PARSE_AND_SEND_TO_MAIN:
-            run_after_confirm_screen(PARSE_AND_SEND_TO_MAIN, parse_websites_and_send_messages, TESTING_CHANNEL_ID)
+            run_after_confirm_screen(PARSE_AND_SEND_TO_MAIN, parse_websites_and_send_messages, MAIN_CHANNEL_ID)
         elif main_menu_action == CREATE_FILES:
             run_after_confirm_screen(CREATE_FILES, create_files)
         elif main_menu_action == POST_TO_TESTING:
