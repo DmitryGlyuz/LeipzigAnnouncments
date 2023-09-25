@@ -1,7 +1,7 @@
 import os
 
 from config_handlers import load_config, set_config_property, InvalidConfigError
-from date_handlers import move_start_date_in_config_week_forward
+from date_handlers import move_start_date_in_config_week_forward, set_start_date_to_closest_monday
 from messages_builder import create_files
 from telegram_sender import send_messages_from_files, parse_websites_and_send_messages
 
@@ -80,10 +80,11 @@ def choose_item_screen(actions: tuple, caption="Available actions:", prompt="Ent
 
 
 # Menu items for configuration editing screen
-START_DATE = "Start date"
+START_DATE = "Edit start date"
+SET_START_DATE_TO_CLOSEST_MONDAY = "Set start date to closest monday"
 MANUALLY_MOVE_START_DATE = "Manually move the start date a week forward"
 MOVE_START_DATE = "Move the start date a week forward after parsing"
-DAYS_LIMIT = "Days limit"
+DAYS_LIMIT = "Edit days limit"
 BACK = "Go back"
 ON = "On"
 OFF = "Off"
@@ -133,10 +134,14 @@ def edit_days_limit_screen():
 def edit_config_screen():
     while True:
         print_caption_and_config("Editing configuration")
-        config_items = (START_DATE, MANUALLY_MOVE_START_DATE, MOVE_START_DATE, DAYS_LIMIT, BACK)
-        item_to_edit = choose_item_screen(config_items, "Available config items:")
+        config_items = (
+            START_DATE, SET_START_DATE_TO_CLOSEST_MONDAY, MANUALLY_MOVE_START_DATE, MOVE_START_DATE, DAYS_LIMIT, BACK)
+        item_to_edit = choose_item_screen(config_items)
         if item_to_edit == START_DATE:
             edit_start_date_screen()
+        elif item_to_edit == SET_START_DATE_TO_CLOSEST_MONDAY:
+            run_after_confirm_screen(SET_START_DATE_TO_CLOSEST_MONDAY, set_start_date_to_closest_monday,
+                                     show_starting=False)
         elif item_to_edit == MANUALLY_MOVE_START_DATE:
             run_after_confirm_screen(MANUALLY_MOVE_START_DATE, move_start_date_in_config_week_forward,
                                      show_starting=False)
