@@ -200,7 +200,7 @@ def main_menu():
         elif main_menu_action == POST_TO_TESTING:
             run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, TESTING_CHANNEL_ID)
         elif main_menu_action == POST_TO_MAIN:
-            run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, MAIN_CHANNEL_ID)
+            run_after_confirm_screen(POST_TO_MAIN, send_messages_from_files, MAIN_CHANNEL_ID)
         elif main_menu_action == PRINT_CONFIG:
             print_config()
             print()

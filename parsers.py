@@ -1,7 +1,8 @@
+import pprint
 import locale
 import re
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -57,8 +58,13 @@ def get_planlos_events(start_date: datetime.date, final_date: datetime.date):
             event_cells = event_row.find_all("td")
             time_cell = event_cells[0]
             event_cell = event_cells[1]
+            if event_cell.em:
+                place = event_cell.em.text
+            else:
+                place = ""
             event = {
-                "name": event_cell.text.strip(),
+                "name": event_cell.a.text.strip(),
+                "place": place,
                 "time": add_spaces(time_cell.text.strip()),
                 "URL": event_cell.a.get("href")
             }

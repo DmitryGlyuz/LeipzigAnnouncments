@@ -16,9 +16,14 @@ def make_hyperlink(url, resource_name, symbol=URL_SYMBOL):
 def make_strings_for_planlos(events: list[dict]) -> list[str]:
     output_strings = []
     for event in events:
+        place = event['place']
+        if place:
+            place_text = f"\n{LOCATION_SYMBOL}{place}"
+        else:
+            place_text = ""
         output_strings.append(f"""\
 {BULLET_SYMBOL} <b>{event['time']}:</b>
-{event['name']}
+{event['name']}{place_text}
 {make_hyperlink(event['URL'], 'event link')}\n\n""")
     return output_strings
 
