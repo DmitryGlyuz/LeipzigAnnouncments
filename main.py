@@ -165,7 +165,7 @@ def delete_all_files_with_messages():
 # Main menu items
 PARSE_AND_SEND_TO_TESTING = "Parse websites and send messages directly to the TESTING channel"
 PARSE_AND_SEND_TO_MAIN = "Parse websites and send messages directly to the MAIN channel"
-CREATE_FILES = "Create files with announcements"
+CREATE_FILES = "Parse websites and create files with announcements"
 POST_TO_TESTING = "Post announcements from files to the TESTING channel"
 POST_TO_MAIN = "Post announcements from files to the MAIN channel"
 PRINT_CONFIG = "Print configuration"
@@ -201,6 +201,7 @@ def main_menu():
             run_after_confirm_screen(POST_TO_TESTING, send_messages_from_files, TESTING_CHANNEL_ID)
         elif main_menu_action == POST_TO_MAIN:
             run_after_confirm_screen(POST_TO_MAIN, send_messages_from_files, MAIN_CHANNEL_ID)
+            run_after_confirm_screen(DELETE_FILES, delete_all_files_with_messages)
         elif main_menu_action == PRINT_CONFIG:
             print_config()
             print()
